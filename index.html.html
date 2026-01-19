@@ -1,0 +1,31 @@
+<!-- AI Meme Lab Section -->
+<section class="pt-32 pb-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto bg-white border-8 border-text rounded-[3rem] p-8 shadow-[12px_12px_0px_#78350f]">
+        <h2 class="cartoon-font text-5xl mb-4 uppercase">AI Meme Factory</h2>
+        <p class="font-bold opacity-70 mb-8 italic">Enter a vibe and let Gemini carve a fresh meme for you!</p>
+        
+        <div class="space-y-4">
+            <input type="text" id="memeVibe" placeholder="e.g. BTC to $1M, Sitting on the table..." 
+                   class="w-full p-4 border-4 border-text rounded-2xl font-bold text-lg focus:outline-none focus:ring-4 focus:ring-yellow-400">
+            
+            <button onclick="generateMeme()" id="genBtn" class="btn-pop w-full py-5 rounded-2xl font-black text-2xl uppercase">
+                Generate Meme 🚀
+            </button>
+        </div>
+
+        <!-- Result Area (Sticker Border Removed) -->
+        <div id="resultArea" class="mt-12 hidden">
+            <div class="flex justify-center mb-4"><div id="spinner" class="loader"></div></div>
+            
+            <!-- We removed the 'sticker' class here and added a clean rounded edge -->
+            <div id="memeContainer" class="relative inline-block rounded-2xl overflow-hidden bg-black shadow-2xl">
+                <img id="memeImage" src="" alt="AI Generated Meme" class="w-full max-w-md opacity-0 transition-opacity duration-1000 block">
+                
+                <!-- Caption overlay stays, but without the white frame -->
+                <div id="memeCaption" class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/70 to-transparent text-white cartoon-font text-2xl uppercase tracking-wider leading-tight"></div>
+            </div>
+            
+            <p class="mt-6 text-[10px] font-black opacity-30 uppercase tracking-widest">Raw AI Generation • No Border Applied</p>
+        </div>
+    </div>
+</section>
